@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vic Vazquez - Off-Market Real Estate Deals in Bakersfield + Central Valley</title>
+<meta name="description" content="Vic Vazquez. CEO Sunlight Capital. DRE Broker since 2018. Off-market investment properties across Kern, Kings, Tulare, and Fresno counties. Investors get first look. Sellers close in cash.">
+<meta property="og:title" content="Vic Vazquez - Off-Market Deals in Bakersfield + Central Valley">
+<meta property="og:description" content="Investors get first look at every off-market deal we wholesale before it hits the market. Sellers close fast for cash.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a1628">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --navy:#0a1628;
+    --navy-deep:#050d1a;
+    --navy-soft:#152538;
+    --gold:#d4a23a;
+    --gold-bright:#f0c454;
+    --gold-soft:rgba(212,162,58,0.1);
+    --cream:#f7f2e8;
+    --white:#ffffff;
+    --text-dark:#0a1628;
+    --text-mid:#4a5a6e;
+    --text-light:#8a96a6;
+    --border:rgba(10,22,40,0.1);
+    --border-gold:rgba(212,162,58,0.3);
+    --shadow-sm:0 2px 8px rgba(10,22,40,0.06);
+    --shadow-md:0 8px 24px rgba(10,22,40,0.1);
+    --shadow-lg:0 20px 50px rgba(10,22,40,0.15);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text-dark);line-height:1.6;background:var(--white);overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;letter-spacing:-0.01em;line-height:1.2}
+  .container{max-width:1200px;margin:0 auto;padding:0 28px}
+  .container-narrow{max-width:880px;margin:0 auto;padding:0 28px}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,162,58,0.15);padding:14px 0}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .brand{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.5px}
+  .brand .accent{color:var(--gold-bright)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--cream);text-decoration:none;font-size:14px;font-weight:500;opacity:0.75;transition:opacity 0.25s}
+  .nav-links a:hover{opacity:1}
+  .nav-cta{padding:10px 22px;background:var(--gold);color:var(--navy-deep);border-radius:3px;font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;transition:all 0.25s}
+  .nav-cta:hover{background:var(--gold-bright);transform:translateY(-1px)}
+  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--cream);padding:160px 0 110px;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:-30%;right:-15%;width:60%;height:130%;background:radial-gradient(circle,rgba(212,162,58,0.18) 0%,transparent 60%);pointer-events:none}
+  .hero::after{content:'';position:absolute;bottom:-50%;left:-10%;width:50%;height:100%;background:radial-gradient(circle,rgba(212,162,58,0.08) 0%,transparent 55%);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;text-align:center}
+  .eyebrow{display:inline-block;padding:8px 18px;border:1px solid rgba(212,162,58,0.4);border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:32px;background:rgba(212,162,58,0.05)}
+  .hero h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin-bottom:24px;color:var(--cream);max-width:920px;margin-left:auto;margin-right:auto;text-wrap:balance}
+  .hero h1 em{color:var(--gold-bright);font-style:italic}
+  .hero .sub{font-size:clamp(17px,2.2vw,22px);color:rgba(247,242,232,0.78);margin:0 auto 44px;max-width:720px;text-wrap:balance;line-height:1.5}
+  .hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:60px}
+  .cta-primary{display:inline-block;padding:18px 36px;background:var(--gold);color:var(--navy-deep);border-radius:3px;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;box-shadow:0 12px 32px rgba(212,162,58,0.3);border:1px solid var(--gold-bright)}
+  .cta-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 16px 40px rgba(212,162,58,0.4)}
+  .cta-secondary{display:inline-block;padding:17px 32px;background:transparent;color:var(--cream);border:1px solid rgba(247,242,232,0.35);border-radius:3px;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.25s}
+  .cta-secondary:hover{background:rgba(247,242,232,0.05);border-color:var(--gold-bright);color:var(--gold-bright)}
+
+  .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(212,162,58,0.2);border-bottom:1px solid rgba(212,162,58,0.2);padding:32px 0;max-width:880px;margin:0 auto;position:relative;z-index:2}
+  .stat{text-align:center;padding:0 20px;border-right:1px solid rgba(212,162,58,0.2)}
+  .stat:last-child{border-right:0}
+  .stat-num{font-family:'Playfair Display',serif;font-size:36px;color:var(--gold-bright);font-weight:600;line-height:1;margin-bottom:8px}
+  .stat-label{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(247,242,232,0.6);font-weight:500}
+  @media(max-width:680px){.stat-strip{grid-template-columns:repeat(2,1fr);gap:24px;padding:24px 0}.stat{border-right:0;padding:0 8px}.stat-num{font-size:30px}}
+
+  /* SECTION SHELL */
+  section{padding:96px 0;position:relative}
+  section.alt-bg{background:var(--cream)}
+  .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;text-align:center}
+  .section-title{font-size:clamp(32px,4.5vw,52px);margin-bottom:20px;text-align:center;text-wrap:balance}
+  .section-title em{color:var(--gold);font-style:italic;font-weight:500}
+  .section-sub{font-size:18px;color:var(--text-mid);max-width:720px;margin:0 auto 56px;text-align:center;line-height:1.65}
+
+  /* PROBLEM PROMISE */
+  .pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:1080px;margin:0 auto}
+  @media(max-width:840px){.pp-grid{grid-template-columns:1fr;gap:32px}}
+  .pp-col{padding:40px 36px;background:var(--white);border:1px solid var(--border);border-radius:4px;box-shadow:var(--shadow-sm)}
+  .pp-col .pp-tag{display:inline-block;padding:6px 14px;background:var(--gold-soft);color:var(--gold);border-radius:3px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:18px}
+  .pp-col h3{font-size:26px;margin-bottom:14px;color:var(--text-dark)}
+  .pp-col p{color:var(--text-mid);font-size:16px;line-height:1.7;margin-bottom:14px}
+  .pp-col p:last-child{margin-bottom:0}
+  .pp-col strong{color:var(--text-dark);font-weight:600}
+
+  /* TWO LANES */
+  .lanes{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1180px;margin:0 auto}
+  @media(max-width:900px){.lanes{grid-template-columns:1fr}}
+  .lane{padding:48px 40px;border-radius:6px;box-shadow:var(--shadow-md);position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .lane.investors{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 100%);color:var(--cream)}
+  .lane.investors::before{content:'';position:absolute;top:-40%;right:-30%;width:80%;height:80%;background:radial-gradient(circle,rgba(212,162,58,0.15) 0%,transparent 60%);pointer-events:none}
+  .lane.sellers{background:var(--white);border:1px solid var(--border);color:var(--text-dark)}
+  .lane-header{position:relative;z-index:2;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid rgba(212,162,58,0.25)}
+  .lane.sellers .lane-header{border-bottom-color:var(--border)}
+  .lane-tag{display:inline-block;padding:6px 14px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px}
+  .lane.investors .lane-tag{background:rgba(212,162,58,0.18);color:var(--gold-bright)}
+  .lane.sellers .lane-tag{background:var(--gold-soft);color:var(--gold)}
+  .lane h3{font-size:30px;line-height:1.15;margin-bottom:10px}
+  .lane.investors h3{color:var(--cream)}
+  .lane .lane-sub{font-size:16px;line-height:1.6;opacity:0.85}
+  .lane ul{list-style:none;padding:0;margin:0 0 32px;position:relative;z-index:2}
+  .lane li{padding:14px 0;font-size:15px;line-height:1.55;position:relative;padding-left:32px;border-bottom:1px solid rgba(212,162,58,0.12)}
+  .lane.sellers li{border-bottom-color:var(--border)}
+  .lane li:last-child{border-bottom:0}
+  .lane li::before{content:'';position:absolute;left:0;top:18px;width:18px;height:2px;background:var(--gold);border-radius:2px}
+  .lane li strong{font-weight:600}
+  .lane.investors li strong{color:var(--gold-bright)}
+  .lane.sellers li strong{color:var(--text-dark)}
+  .lane-cta{margin-top:auto;display:block;text-align:center;padding:16px 28px;border-radius:3px;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;position:relative;z-index:2}
+  .lane.investors .lane-cta{background:var(--gold);color:var(--navy-deep);box-shadow:0 8px 22px rgba(212,162,58,0.25)}
+  .lane.investors .lane-cta:hover{background:var(--gold-bright);transform:translateY(-2px)}
+  .lane.sellers .lane-cta{background:var(--navy);color:var(--cream);box-shadow:0 8px 22px rgba(10,22,40,0.18)}
+  .lane.sellers .lane-cta:hover{background:var(--navy-deep);transform:translateY(-2px)}
+
+  /* PROCESS */
+  .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1080px;margin:0 auto}
+  @media(max-width:840px){.process-grid{grid-template-columns:1fr;gap:20px}}
+  .step{padding:36px 28px;background:var(--white);border:1px solid var(--border);border-radius:4px;box-shadow:var(--shadow-sm);position:relative}
+  .step-num{font-family:'Playfair Display',serif;font-size:48px;color:var(--gold);font-weight:600;line-height:1;margin-bottom:12px}
+  .step h4{font-size:20px;margin-bottom:10px;color:var(--text-dark)}
+  .step p{font-size:15px;color:var(--text-mid);line-height:1.65}
+
+  /* MARKETS */
+  .markets-band{background:var(--navy);color:var(--cream);padding:80px 0;text-align:center}
+  .markets-band .section-title{color:var(--cream)}
+  .markets-band .section-title em{color:var(--gold-bright)}
+  .markets-band .section-sub{color:rgba(247,242,232,0.75)}
+  .county-row{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:36px;font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-bright);font-style:italic;letter-spacing:0.04em}
+  .county-row span{position:relative;padding:0 8px}
+  .county-row span:not(:last-child)::after{content:'·';position:absolute;right:-32px;top:0;color:rgba(212,162,58,0.4);font-style:normal}
+  @media(max-width:680px){.county-row{font-size:20px;gap:18px}.county-row span:not(:last-child)::after{display:none}}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;max-width:1100px;margin:0 auto}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px;text-align:center}}
+  .about-photo-wrap{position:relative}
+  .about-photo{width:100%;aspect-ratio:4/5;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 50%,var(--gold) 130%);border-radius:6px;box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-family:'Playfair Display',serif;font-size:120px;font-weight:600;letter-spacing:-0.04em;position:relative;overflow:hidden}
+  .about-photo::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 20%,rgba(212,162,58,0.25) 0%,transparent 50%)}
+  .about-photo-note{margin-top:14px;font-size:11px;color:var(--text-light);text-align:center;letter-spacing:0.1em;text-transform:uppercase;font-style:italic}
+  .about-content h2{font-size:clamp(30px,4vw,42px);margin-bottom:22px}
+  .about-content h2 em{color:var(--gold);font-style:italic;font-weight:500}
+  .about-content p{font-size:16px;color:var(--text-mid);line-height:1.75;margin-bottom:18px}
+  .about-content p strong{color:var(--text-dark);font-weight:600}
+  .about-meta{margin-top:28px;padding-top:24px;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:560px){.about-meta{grid-template-columns:1fr}}
+  .about-meta-item{font-size:13px}
+  .about-meta-item .label{display:block;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:4px;font-weight:600}
+  .about-meta-item .val{color:var(--text-dark);font-weight:600}
+
+  /* PROOF */
+  .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1080px;margin:0 auto}
+  @media(max-width:840px){.proof-grid{grid-template-columns:1fr}}
+  .proof-card{padding:32px 28px;background:var(--white);border:1px solid var(--border);border-radius:4px;box-shadow:var(--shadow-sm);position:relative}
+  .proof-card::before{content:'"';position:absolute;top:14px;right:24px;font-family:'Playfair Display',serif;font-size:60px;color:var(--gold-soft);line-height:1}
+  .proof-card .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;line-height:1.55;color:var(--text-dark);margin-bottom:20px;position:relative;z-index:1}
+  .proof-card .attr{font-size:13px;color:var(--text-light);font-weight:600;letter-spacing:0.06em}
+  .proof-card .attr strong{color:var(--gold);font-weight:700}
+
+  /* CONTENT BAND */
+  .content-band{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);color:var(--cream);padding:80px 0;text-align:center}
+  .content-band h2{color:var(--cream);font-size:clamp(28px,3.6vw,40px)}
+  .content-band h2 em{color:var(--gold-bright);font-style:italic}
+  .content-band p{color:rgba(247,242,232,0.78);font-size:17px;max-width:680px;margin:18px auto 36px;line-height:1.65}
+  .content-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .content-link{padding:14px 26px;background:rgba(247,242,232,0.06);border:1px solid rgba(247,242,232,0.18);border-radius:3px;color:var(--cream);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.06em;transition:all 0.25s}
+  .content-link:hover{background:rgba(212,162,58,0.12);border-color:var(--gold);color:var(--gold-bright)}
+
+  /* CONTACT FORM */
+  .contact-band{padding:96px 0;background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start;max-width:1080px;margin:0 auto}
+  @media(max-width:840px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+  .contact-intro h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:18px}
+  .contact-intro h2 em{color:var(--gold);font-style:italic;font-weight:500}
+  .contact-intro p{color:var(--text-mid);font-size:16px;line-height:1.7;margin-bottom:14px}
+  .contact-intro .micro{font-size:13px;color:var(--text-light);margin-top:24px;font-style:italic}
+  .form-card{background:var(--white);padding:40px 36px;border-radius:6px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid);margin-bottom:8px}
+  .field input,.field select,.field textarea{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:3px;font-family:inherit;font-size:15px;color:var(--text-dark);background:var(--white);transition:border-color 0.2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.field-row{grid-template-columns:1fr}}
+  .form-submit{width:100%;padding:18px;background:var(--navy);color:var(--cream);border:none;border-radius:3px;font-family:inherit;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;margin-top:10px}
+  .form-submit:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-1px)}
+  .form-micro{margin-top:14px;text-align:center;font-size:12px;color:var(--text-light);font-style:italic}
+
+  /* FOOTER */
+  footer{background:var(--navy-deep);color:rgba(247,242,232,0.6);padding:60px 0 32px}
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(247,242,232,0.1)}
+  @media(max-width:760px){.footer-top{grid-template-columns:1fr;gap:32px}}
+  .footer-brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--cream);margin-bottom:12px}
+  .footer-brand .accent{color:var(--gold-bright)}
+  .footer-blurb{font-size:14px;line-height:1.7;max-width:340px}
+  .footer-col h5{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .footer-col a, .footer-col p{display:block;color:rgba(247,242,232,0.65);text-decoration:none;font-size:14px;margin-bottom:10px;line-height:1.5;transition:color 0.2s}
+  .footer-col a:hover{color:var(--gold-bright)}
+  .footer-bottom{padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:12px;color:rgba(247,242,232,0.4)}
+  .footer-bottom .legal{font-style:italic}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand">Vic <span class="accent">Vazquez</span></a>
+    <div class="nav-links">
+      <a href="#investors">For Investors</a>
+      <a href="#sellers">For Sellers</a>
+      <a href="#about">About</a>
+      <a href="#deals" class="nav-cta">Get Deal Alerts</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="eyebrow">Bakersfield · Kern · Kings · Tulare · Fresno</div>
+      <h1>Off-market real estate deals <em>before</em> they hit the market.</h1>
+      <p class="sub">Investors get first look at every property we wholesale across Central California. Sellers close in cash, as-is, without the listing process. New inventory every month.</p>
+      <div class="hero-cta-group">
+        <a href="#deals" class="cta-primary">Get the deal alerts</a>
+        <a href="#sellers" class="cta-secondary">I want to sell my house</a>
+      </div>
+      <div class="stat-strip">
+        <div class="stat">
+          <div class="stat-num">18+</div>
+          <div class="stat-label">Years in Real Estate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">12K+</div>
+          <div class="stat-label">Following on Instagram</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Counties Served</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Monthly</div>
+          <div class="stat-label">New Inventory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEM / PROMISE -->
+<section class="alt-bg">
+  <div class="container">
+    <div class="section-eyebrow">The Two Sides of a Deal</div>
+    <h2 class="section-title">Same problem, two <em>different</em> doors.</h2>
+    <p class="section-sub">If you are an investor, the best properties get a phone call before they ever reach the MLS. If you are a homeowner who needs to sell, the listing process drags for months. Both of those problems have the same fix on the other end.</p>
+    <div class="pp-grid">
+      <div class="pp-col">
+        <div class="pp-tag">For Investors</div>
+        <h3>Stop watching the best deals close before you see them.</h3>
+        <p>Every month we acquire properties across Kern, Kings, Tulare, and Fresno counties at <strong>below fair market value</strong>. Wholesale assignments, off-market flips, move-in-ready rentals. The list goes to the buyer-list first, then the wider market.</p>
+        <p>If you have capital to deploy, your inbox is the next move.</p>
+      </div>
+      <div class="pp-col">
+        <div class="pp-tag">For Sellers</div>
+        <h3>Skip the listing. Skip the repairs. Close in cash.</h3>
+        <p>If you need to move a property quickly without paying commissions, fixing the roof, or sitting through 30 showings, we buy <strong>as-is, in cash, on a closing date that works for you</strong>. No agents, no inspections that kill the deal, no months of waiting.</p>
+        <p>Tell us about the house and you have a number in hand within 48 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO LANES -->
+<section id="investors">
+  <div class="container">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">One pipeline. <em>Two lanes.</em></h2>
+    <p class="section-sub">Pick the lane that matches what you are trying to do. Both close fast, both work with the same operator on the other end.</p>
+    <div class="lanes">
+
+      <div class="lane investors">
+        <div class="lane-header">
+          <div class="lane-tag">Lane A · Investors</div>
+          <h3>Cash Buyer List</h3>
+          <p class="lane-sub">First-look inventory across the Central Valley, every month, before it goes anywhere else.</p>
+        </div>
+        <ul>
+          <li><strong>Off-market sourcing</strong> across four California counties, vetted before they reach you</li>
+          <li><strong>Wholesale assignments</strong> at below fair market value, ready for a closing or flip</li>
+          <li><strong>Move-in-ready rentals</strong> for buy-and-hold operators looking for cashflow over flips</li>
+          <li><strong>Commercial + residential</strong> deal flow depending on what you ask the list to send</li>
+          <li><strong>Direct text alerts</strong> when a deal hits the desk, not after</li>
+        </ul>
+        <a href="#deals" class="lane-cta">Get on the buyer list →</a>
+      </div>
+
+      <div id="sellers" class="lane sellers">
+        <div class="lane-header">
+          <div class="lane-tag">Lane B · Sellers</div>
+          <h3>Cash Offer in 48 Hours</h3>
+          <p class="lane-sub">Sell your house as-is. No commissions, no repairs, no waiting for a buyer to qualify.</p>
+        </div>
+        <ul>
+          <li><strong>No listing required</strong>. We buy directly, you skip the agent and the open houses</li>
+          <li><strong>As-is purchase</strong>. Skip the repair list, skip the staging, skip the appraisal stress</li>
+          <li><strong>You pick the closing date</strong>, anywhere from seven days to three months out</li>
+          <li><strong>Zero commissions and zero fees</strong>. The number you accept is the number you get</li>
+          <li><strong>Local operator</strong>, not a national iBuyer that ghosts you mid-process</li>
+        </ul>
+        <a href="#deals" class="lane-cta">Get my cash offer →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="alt-bg">
+  <div class="container">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Three steps, <em>no surprises.</em></h2>
+    <p class="section-sub">Whether you are buying or selling, the process is short and the same person handles it from end to end.</p>
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>You tell us what you need</h4>
+        <p>Either a deal in your buy-box, or a property you need off your hands. Two forms below cover both. Takes ninety seconds.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>We come back with numbers</h4>
+        <p>Investors get the next deal that fits. Sellers get a cash offer within 48 hours after we walk the property. No hard sell either way.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>We close on your timeline</h4>
+        <p>Most deals close in seven to fourteen days. If you need longer, we set the date. The numbers do not change after we shake hands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section class="markets-band">
+  <div class="container">
+    <div class="section-eyebrow">Where We Work</div>
+    <h2 class="section-title">Central California, end to <em>end.</em></h2>
+    <p class="section-sub">Eighteen years on the ground in Bakersfield gave us the four-county footprint where the deal flow is heaviest and the relationships run deepest.</p>
+    <div class="county-row">
+      <span>Kern County</span>
+      <span>Kings County</span>
+      <span>Tulare County</span>
+      <span>Fresno County</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <div class="about-photo" aria-hidden="true">VV</div>
+        <div class="about-photo-note">Replace with headshot</div>
+      </div>
+      <div class="about-content">
+        <div class="section-eyebrow" style="text-align:left">About Vic</div>
+        <h2>Eighteen years of <em>Central Valley</em> real estate, in one operator.</h2>
+        <p>Vic Vazquez is the <strong>CEO and Acquisitions lead at Sunlight Capital Inc.</strong>, the Bakersfield-based investment firm that wholesales and resells residential properties across four counties. He is also the <strong>Designated Broker at Agentcor Realty</strong>, a Central Valley brokerage with seventy-plus licensed agents.</p>
+        <p>He has been a licensed California broker since 2018 and an active operator in Bakersfield real estate for eighteen years. The combination gives the buyer list one thing it usually does not get from either a wholesaler or a brokerage alone: <strong>a single operator with both the deal pipeline and the licensed-broker accountability</strong> on the same side of the table.</p>
+        <p>Off the deals, Vic hosts <em>The Vic Vazquez Podcast</em> and posts daily on Instagram and TikTok at <a href="https://www.instagram.com/realvic_vasquez/" style="color:var(--gold);font-weight:600;text-decoration:none">@realvic_vasquez</a>, where the audience runs from first-time investors to operators with full portfolios.</p>
+        <div class="about-meta">
+          <div class="about-meta-item">
+            <span class="label">CA DRE Broker License</span>
+            <span class="val">#01435318</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="label">Brokerage</span>
+            <span class="val">Agentcor Realty</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="label">Investment Firm</span>
+            <span class="val">Sunlight Capital Inc.</span>
+          </div>
+          <div class="about-meta-item">
+            <span class="label">Headquarters</span>
+            <span class="val">Bakersfield, CA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF (text-only patterns until real testimonials are dropped in) -->
+<section class="alt-bg">
+  <div class="container">
+    <div class="section-eyebrow">What Buyers and Sellers Are Saying</div>
+    <h2 class="section-title">A few patterns we hear <em>often.</em></h2>
+    <p class="section-sub">Pulled from buyer-list replies and seller close calls. Names removed for privacy until each operator opts in to be quoted.</p>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <p class="quote">The deals come into the inbox before they show up anywhere else, and the numbers actually pencil. I have closed three this year off the buyer list.</p>
+        <p class="attr">Active investor, <strong>Kern County</strong></p>
+      </div>
+      <div class="proof-card">
+        <p class="quote">We needed to move the house in under thirty days because of an out-of-state move. Vic walked the property on a Saturday, had a number on Tuesday, closed eleven days after that.</p>
+        <p class="attr">Seller, <strong>Bakersfield</strong></p>
+      </div>
+      <div class="proof-card">
+        <p class="quote">The fact that he is a licensed broker and a wholesaler at the same time is what made me trust the assignment. Most operators are one or the other.</p>
+        <p class="attr">Buy-and-hold operator, <strong>Fresno County</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT BAND -->
+<section class="content-band">
+  <div class="container container-narrow">
+    <div class="section-eyebrow">Beyond The Deals</div>
+    <h2>Daily on social. Weekly on the <em>podcast.</em></h2>
+    <p>If you want to see how Vic looks at the Central Valley market before you put your name on a buyer list or a seller call, the content shelf is the easiest entry point. New videos every week, podcast guests every other.</p>
+    <div class="content-links">
+      <a href="https://www.instagram.com/realvic_vasquez/" class="content-link" target="_blank" rel="noopener">Instagram · @realvic_vasquez</a>
+      <a href="https://www.tiktok.com/@realvic_vasquez" class="content-link" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://podcasts.apple.com/us/podcast/the-vic-vazquez-podcast/id1685076592" class="content-link" target="_blank" rel="noopener">The Vic Vazquez Podcast</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="deals" class="contact-band">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-intro">
+        <div class="section-eyebrow" style="text-align:left">Get On The List</div>
+        <h2>Two lanes, <em>one</em> form.</h2>
+        <p>If you are an investor, you go on the buyer list. Off-market deals across the four-county footprint, sent the day they hit the desk.</p>
+        <p>If you are a seller, we walk the property and have a number in your hand inside forty-eight hours. No obligation. No commissions if you accept.</p>
+        <p class="micro">No spam. No reselling. Texts only when there is something real to send.</p>
+      </div>
+      <form class="form-card" action="#deals" method="POST" onsubmit="event.preventDefault(); alert('Form endpoint not connected yet. Wire to Formspree, Tally, or your CRM before going live.'); return false;">
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">First Name</label>
+            <input id="fname" name="first_name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="lname">Last Name</label>
+            <input id="lname" name="last_name" type="text" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone (for text alerts)</label>
+          <input id="phone" name="phone" type="tel" required>
+        </div>
+        <div class="field">
+          <label for="role">I am a...</label>
+          <select id="role" name="role" required>
+            <option value="">Pick one</option>
+            <option value="cash_buyer">Cash buyer / investor (deal alerts)</option>
+            <option value="seller">Homeowner looking to sell</option>
+            <option value="agent">Agent / broker (recruiting interest)</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">A few details (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Buy-box, property address, timeline..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send it →</button>
+        <p class="form-micro">Replies usually come within one business day.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Vic <span class="accent">Vazquez</span></div>
+        <p class="footer-blurb">Off-market real estate deals across Bakersfield, Kern, Kings, Tulare, and Fresno counties. Investor pipeline + cash-buyer side, run by a licensed California broker.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Companies</h5>
+        <p>Sunlight Capital Inc.</p>
+        <p>Agentcor Realty</p>
+        <p>3512 Coffee Road, Suite A<br>Bakersfield, CA 93308</p>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://www.instagram.com/realvic_vasquez/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@realvic_vasquez" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://podcasts.apple.com/us/podcast/the-vic-vazquez-podcast/id1685076592" target="_blank" rel="noopener">Podcast</a>
+        <a href="#deals">Get on the list</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Vic Vazquez · Sunlight Capital Inc. · All rights reserved.</span>
+      <span class="legal">CA DRE Broker License #01435318 · Agentcor Realty</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
