@@ -8,29 +8,31 @@
 <meta property="og:title" content="Vic Vazquez - Off-Market Deals in Bakersfield + Central Valley">
 <meta property="og:description" content="Investors get first look at every off-market deal we wholesale before it hits the market. Sellers close fast for cash.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0a1628">
+<meta name="theme-color" content="#1d1d1d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
-    --navy:#0a1628;
-    --navy-deep:#050d1a;
-    --navy-soft:#152538;
-    --gold:#d4a23a;
-    --gold-bright:#f0c454;
-    --gold-soft:rgba(212,162,58,0.1);
-    --cream:#f7f2e8;
+    /* Brand palette — verified from sunlightcapitalinc.com (his actual cash-buyer business) */
+    --navy:#1d1d1d;          /* his actual near-black (was navy) */
+    --navy-deep:#0d0d0d;     /* deepest dark */
+    --navy-soft:#2a2a2a;     /* dark gray */
+    --gold:#f7931e;          /* SUNLIGHT orange — his actual primary brand accent */
+    --gold-bright:#fab668;   /* warm light orange */
+    --gold-deep:#da7908;     /* deeper sunset orange */
+    --gold-soft:rgba(247,147,30,0.1);
+    --cream:#fef8f0;         /* warm white substrate */
     --white:#ffffff;
-    --text-dark:#0a1628;
-    --text-mid:#4a5a6e;
+    --text-dark:#1d1d1d;
+    --text-mid:#5a5a5a;      /* matches Sunlight's actual mid-gray */
     --text-light:#8a96a6;
-    --border:rgba(10,22,40,0.1);
-    --border-gold:rgba(212,162,58,0.3);
-    --shadow-sm:0 2px 8px rgba(10,22,40,0.06);
-    --shadow-md:0 8px 24px rgba(10,22,40,0.1);
-    --shadow-lg:0 20px 50px rgba(10,22,40,0.15);
+    --border:rgba(29,29,29,0.1);
+    --border-gold:rgba(247,147,30,0.3);
+    --shadow-sm:0 2px 8px rgba(29,29,29,0.06);
+    --shadow-md:0 8px 24px rgba(29,29,29,0.1);
+    --shadow-lg:0 20px 50px rgba(29,29,29,0.15);
   }
   html{scroll-behavior:smooth}
   body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text-dark);line-height:1.6;background:var(--white);overflow-x:hidden}
@@ -39,7 +41,7 @@
   .container-narrow{max-width:880px;margin:0 auto;padding:0 28px}
 
   /* NAV */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,162,58,0.15);padding:14px 0}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(29,29,29,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(247,147,30,0.15);padding:14px 0}
   .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
   .brand{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.5px}
   .brand .accent{color:var(--gold-bright)}
@@ -52,21 +54,31 @@
 
   /* HERO */
   .hero{position:relative;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--cream);padding:160px 0 110px;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-30%;right:-15%;width:60%;height:130%;background:radial-gradient(circle,rgba(212,162,58,0.18) 0%,transparent 60%);pointer-events:none}
-  .hero::after{content:'';position:absolute;bottom:-50%;left:-10%;width:50%;height:100%;background:radial-gradient(circle,rgba(212,162,58,0.08) 0%,transparent 55%);pointer-events:none}
+  .hero::before{content:'';position:absolute;top:-30%;right:-15%;width:60%;height:130%;background:radial-gradient(circle,rgba(247,147,30,0.18) 0%,transparent 60%);pointer-events:none}
+  .hero::after{content:'';position:absolute;bottom:-50%;left:-10%;width:50%;height:100%;background:radial-gradient(circle,rgba(247,147,30,0.08) 0%,transparent 55%);pointer-events:none}
   .hero-inner{position:relative;z-index:2;text-align:center}
-  .eyebrow{display:inline-block;padding:8px 18px;border:1px solid rgba(212,162,58,0.4);border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:32px;background:rgba(212,162,58,0.05)}
+  .eyebrow{display:inline-block;padding:8px 18px;border:1px solid rgba(247,147,30,0.4);border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:32px;background:rgba(247,147,30,0.05)}
   .hero h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin-bottom:24px;color:var(--cream);max-width:920px;margin-left:auto;margin-right:auto;text-wrap:balance}
   .hero h1 em{color:var(--gold-bright);font-style:italic}
   .hero .sub{font-size:clamp(17px,2.2vw,22px);color:rgba(247,242,232,0.78);margin:0 auto 44px;max-width:720px;text-wrap:balance;line-height:1.5}
   .hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:60px}
-  .cta-primary{display:inline-block;padding:18px 36px;background:var(--gold);color:var(--navy-deep);border-radius:3px;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;box-shadow:0 12px 32px rgba(212,162,58,0.3);border:1px solid var(--gold-bright)}
-  .cta-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 16px 40px rgba(212,162,58,0.4)}
+  .cta-primary{display:inline-block;padding:18px 36px;background:var(--gold);color:var(--navy-deep);border-radius:3px;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;box-shadow:0 12px 32px rgba(247,147,30,0.3);border:1px solid var(--gold-bright)}
+  .cta-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 16px 40px rgba(247,147,30,0.4)}
   .cta-secondary{display:inline-block;padding:17px 32px;background:transparent;color:var(--cream);border:1px solid rgba(247,242,232,0.35);border-radius:3px;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.25s}
   .cta-secondary:hover{background:rgba(247,242,232,0.05);border-color:var(--gold-bright);color:var(--gold-bright)}
 
-  .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(212,162,58,0.2);border-bottom:1px solid rgba(212,162,58,0.2);padding:32px 0;max-width:880px;margin:0 auto;position:relative;z-index:2}
-  .stat{text-align:center;padding:0 20px;border-right:1px solid rgba(212,162,58,0.2)}
+  /* HERO QUICK CAPTURE — investor email capture above the fold */
+  .quick-capture{display:flex;gap:8px;max-width:520px;margin:0 auto 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(247,147,30,0.32);border-radius:3px;padding:6px;position:relative;z-index:2}
+  .quick-capture input{flex:1;background:transparent;border:none;outline:none;color:var(--cream);font-family:inherit;font-size:15px;padding:12px 14px}
+  .quick-capture input::placeholder{color:rgba(247,242,232,0.55)}
+  .quick-capture button{padding:12px 22px;background:var(--gold);color:var(--navy-deep);border:none;border-radius:2px;font-family:inherit;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+  .quick-capture button:hover{background:var(--gold-bright)}
+  .quick-capture button:disabled{opacity:0.7;cursor:default}
+  .quick-capture-micro{font-size:12px;color:rgba(247,242,232,0.5);margin-bottom:36px;font-style:italic;position:relative;z-index:2}
+  @media(max-width:560px){.quick-capture{flex-direction:column;padding:10px}.quick-capture button{width:100%}}
+
+  .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(247,147,30,0.2);border-bottom:1px solid rgba(247,147,30,0.2);padding:32px 0;max-width:880px;margin:0 auto;position:relative;z-index:2}
+  .stat{text-align:center;padding:0 20px;border-right:1px solid rgba(247,147,30,0.2)}
   .stat:last-child{border-right:0}
   .stat-num{font-family:'Playfair Display',serif;font-size:36px;color:var(--gold-bright);font-weight:600;line-height:1;margin-bottom:8px}
   .stat-label{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(247,242,232,0.6);font-weight:500}
@@ -95,18 +107,18 @@
   @media(max-width:900px){.lanes{grid-template-columns:1fr}}
   .lane{padding:48px 40px;border-radius:6px;box-shadow:var(--shadow-md);position:relative;overflow:hidden;display:flex;flex-direction:column}
   .lane.investors{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 100%);color:var(--cream)}
-  .lane.investors::before{content:'';position:absolute;top:-40%;right:-30%;width:80%;height:80%;background:radial-gradient(circle,rgba(212,162,58,0.15) 0%,transparent 60%);pointer-events:none}
+  .lane.investors::before{content:'';position:absolute;top:-40%;right:-30%;width:80%;height:80%;background:radial-gradient(circle,rgba(247,147,30,0.15) 0%,transparent 60%);pointer-events:none}
   .lane.sellers{background:var(--white);border:1px solid var(--border);color:var(--text-dark)}
-  .lane-header{position:relative;z-index:2;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid rgba(212,162,58,0.25)}
+  .lane-header{position:relative;z-index:2;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid rgba(247,147,30,0.25)}
   .lane.sellers .lane-header{border-bottom-color:var(--border)}
   .lane-tag{display:inline-block;padding:6px 14px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px}
-  .lane.investors .lane-tag{background:rgba(212,162,58,0.18);color:var(--gold-bright)}
+  .lane.investors .lane-tag{background:rgba(247,147,30,0.18);color:var(--gold-bright)}
   .lane.sellers .lane-tag{background:var(--gold-soft);color:var(--gold)}
   .lane h3{font-size:30px;line-height:1.15;margin-bottom:10px}
   .lane.investors h3{color:var(--cream)}
   .lane .lane-sub{font-size:16px;line-height:1.6;opacity:0.85}
   .lane ul{list-style:none;padding:0;margin:0 0 32px;position:relative;z-index:2}
-  .lane li{padding:14px 0;font-size:15px;line-height:1.55;position:relative;padding-left:32px;border-bottom:1px solid rgba(212,162,58,0.12)}
+  .lane li{padding:14px 0;font-size:15px;line-height:1.55;position:relative;padding-left:32px;border-bottom:1px solid rgba(247,147,30,0.12)}
   .lane.sellers li{border-bottom-color:var(--border)}
   .lane li:last-child{border-bottom:0}
   .lane li::before{content:'';position:absolute;left:0;top:18px;width:18px;height:2px;background:var(--gold);border-radius:2px}
@@ -114,9 +126,9 @@
   .lane.investors li strong{color:var(--gold-bright)}
   .lane.sellers li strong{color:var(--text-dark)}
   .lane-cta{margin-top:auto;display:block;text-align:center;padding:16px 28px;border-radius:3px;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;position:relative;z-index:2}
-  .lane.investors .lane-cta{background:var(--gold);color:var(--navy-deep);box-shadow:0 8px 22px rgba(212,162,58,0.25)}
+  .lane.investors .lane-cta{background:var(--gold);color:var(--navy-deep);box-shadow:0 8px 22px rgba(247,147,30,0.25)}
   .lane.investors .lane-cta:hover{background:var(--gold-bright);transform:translateY(-2px)}
-  .lane.sellers .lane-cta{background:var(--navy);color:var(--cream);box-shadow:0 8px 22px rgba(10,22,40,0.18)}
+  .lane.sellers .lane-cta{background:var(--navy);color:var(--cream);box-shadow:0 8px 22px rgba(29,29,29,0.18)}
   .lane.sellers .lane-cta:hover{background:var(--navy-deep);transform:translateY(-2px)}
 
   /* PROCESS */
@@ -134,7 +146,7 @@
   .markets-band .section-sub{color:rgba(247,242,232,0.75)}
   .county-row{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:36px;font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-bright);font-style:italic;letter-spacing:0.04em}
   .county-row span{position:relative;padding:0 8px}
-  .county-row span:not(:last-child)::after{content:'·';position:absolute;right:-32px;top:0;color:rgba(212,162,58,0.4);font-style:normal}
+  .county-row span:not(:last-child)::after{content:'·';position:absolute;right:-32px;top:0;color:rgba(247,147,30,0.4);font-style:normal}
   @media(max-width:680px){.county-row{font-size:20px;gap:18px}.county-row span:not(:last-child)::after{display:none}}
 
   /* ABOUT */
@@ -142,7 +154,7 @@
   @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px;text-align:center}}
   .about-photo-wrap{position:relative}
   .about-photo{width:100%;aspect-ratio:4/5;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 50%,var(--gold) 130%);border-radius:6px;box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-family:'Playfair Display',serif;font-size:120px;font-weight:600;letter-spacing:-0.04em;position:relative;overflow:hidden}
-  .about-photo::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 20%,rgba(212,162,58,0.25) 0%,transparent 50%)}
+  .about-photo::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 20%,rgba(247,147,30,0.25) 0%,transparent 50%)}
   .about-photo-note{margin-top:14px;font-size:11px;color:var(--text-light);text-align:center;letter-spacing:0.1em;text-transform:uppercase;font-style:italic}
   .about-content h2{font-size:clamp(30px,4vw,42px);margin-bottom:22px}
   .about-content h2 em{color:var(--gold);font-style:italic;font-weight:500}
@@ -170,7 +182,7 @@
   .content-band p{color:rgba(247,242,232,0.78);font-size:17px;max-width:680px;margin:18px auto 36px;line-height:1.65}
   .content-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .content-link{padding:14px 26px;background:rgba(247,242,232,0.06);border:1px solid rgba(247,242,232,0.18);border-radius:3px;color:var(--cream);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:0.06em;transition:all 0.25s}
-  .content-link:hover{background:rgba(212,162,58,0.12);border-color:var(--gold);color:var(--gold-bright)}
+  .content-link:hover{background:rgba(247,147,30,0.12);border-color:var(--gold);color:var(--gold-bright)}
 
   /* CONTACT FORM */
   .contact-band{padding:96px 0;background:var(--cream)}
@@ -190,6 +202,16 @@
   .form-submit{width:100%;padding:18px;background:var(--navy);color:var(--cream);border:none;border-radius:3px;font-family:inherit;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;margin-top:10px}
   .form-submit:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-1px)}
   .form-micro{margin-top:14px;text-align:center;font-size:12px;color:var(--text-light);font-style:italic}
+  .form-submit:disabled{background:var(--gold);color:var(--navy-deep);opacity:0.85;cursor:default}
+
+  /* WHO WE BUY block — pre-qualifies sellers before they reach the form */
+  .who-we-buy{margin:24px 0;padding:24px;background:var(--gold-soft);border-left:3px solid var(--gold);border-radius:3px}
+  .who-we-buy-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  .who-we-buy p{font-size:15px;color:var(--text-dark);line-height:1.7;margin:0}
+  .who-we-buy strong{color:var(--gold-deep);font-weight:700}
+
+  /* Seller qualification block divider inside the form */
+  .seller-qual-divider{margin:24px 0 18px;padding-top:18px;border-top:1px dashed var(--border);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep)}
 
   /* FOOTER */
   footer{background:var(--navy-deep);color:rgba(247,242,232,0.6);padding:60px 0 32px}
@@ -230,6 +252,11 @@
         <a href="#deals" class="cta-primary">Get the deal alerts</a>
         <a href="#sellers" class="cta-secondary">I want to sell my house</a>
       </div>
+      <form class="quick-capture" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent — check your inbox'; this.querySelector('button').disabled=true; setTimeout(function(){alert('Form endpoint placeholder. Wire to Formspree, Tally, or your CRM before going live.');},200); return false;">
+        <input type="email" name="email" placeholder="Drop your email — get tomorrow's deal first" required autocomplete="email">
+        <button type="submit">Send →</button>
+      </form>
+      <p class="quick-capture-micro">No spam. One text or email when a deal hits the desk.</p>
       <div class="stat-strip">
         <div class="stat">
           <div class="stat-num">18+</div>
@@ -443,9 +470,13 @@
         <h2>Two lanes, <em>one</em> form.</h2>
         <p>If you are an investor, you go on the buyer list. Off-market deals across the four-county footprint, sent the day they hit the desk.</p>
         <p>If you are a seller, we walk the property and have a number in your hand inside forty-eight hours. No obligation. No commissions if you accept.</p>
+        <div class="who-we-buy">
+          <div class="who-we-buy-tag">Who we buy from</div>
+          <p>We buy <strong>off-market</strong> — typically vacant, inherited, behind on payments, in disrepair, or any property where speed matters more than top dollar. If you are already listed with a realtor and waiting for retail offers, we are probably not your fit and will tell you so on the call.</p>
+        </div>
         <p class="micro">No spam. No reselling. Texts only when there is something real to send.</p>
       </div>
-      <form class="form-card" action="#deals" method="POST" onsubmit="event.preventDefault(); alert('Form endpoint not connected yet. Wire to Formspree, Tally, or your CRM before going live.'); return false;">
+      <form class="form-card" id="leadForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return handleLeadForm(event)">
         <div class="field-row">
           <div class="field">
             <label for="fname">First Name</label>
@@ -466,7 +497,7 @@
         </div>
         <div class="field">
           <label for="role">I am a...</label>
-          <select id="role" name="role" required>
+          <select id="role" name="role" required onchange="document.getElementById('seller-qual').style.display = (this.value === 'seller') ? 'block' : 'none'">
             <option value="">Pick one</option>
             <option value="cash_buyer">Cash buyer / investor (deal alerts)</option>
             <option value="seller">Homeowner looking to sell</option>
@@ -474,13 +505,69 @@
             <option value="other">Something else</option>
           </select>
         </div>
+
+        <!-- SELLER QUALIFICATION — only shown when role=seller. Filters out the bad-fit lead profile (already listed, top-market chasers) that wasted prior ad spend. -->
+        <div id="seller-qual" style="display:none">
+          <div class="seller-qual-divider">Quick property questions</div>
+          <div class="field">
+            <label for="listed">Are you currently listed with a real estate agent?</label>
+            <select id="listed" name="currently_listed">
+              <option value="">Pick one</option>
+              <option value="no">No — not listed</option>
+              <option value="expired">Was listed, expired or pulled it</option>
+              <option value="yes">Yes — currently listed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="timeline">How fast do you need to sell?</label>
+            <select id="timeline" name="timeline">
+              <option value="">Pick one</option>
+              <option value="asap">ASAP — urgent (under 30 days)</option>
+              <option value="soon">1–3 months</option>
+              <option value="flex">3–6 months</option>
+              <option value="curious">Just exploring my options</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="situation">What's the situation with the property?</label>
+            <select id="situation" name="situation">
+              <option value="">Pick one</option>
+              <option value="vacant">Vacant</option>
+              <option value="inherited">Inherited</option>
+              <option value="behind">Behind on payments / facing foreclosure</option>
+              <option value="repairs">Needs significant repairs</option>
+              <option value="lived_in">Lived in, good condition</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="address">Property address (city + zip is fine for now)</label>
+            <input id="address" name="property_address" type="text" placeholder="e.g. Bakersfield, 93309">
+          </div>
+        </div>
+
         <div class="field">
           <label for="message">A few details (optional)</label>
-          <textarea id="message" name="message" rows="3" placeholder="Buy-box, property address, timeline..."></textarea>
+          <textarea id="message" name="message" rows="3" placeholder="Buy-box, asking number, timeline, anything else..."></textarea>
         </div>
         <button type="submit" class="form-submit">Send it →</button>
         <p class="form-micro">Replies usually come within one business day.</p>
       </form>
+      <script>
+        function handleLeadForm(e){
+          e.preventDefault();
+          var form = document.getElementById('leadForm');
+          // PRODUCTION: Replace YOUR_FORM_ID with a real Formspree (or Tally/CRM) endpoint, then uncomment the fetch block.
+          // fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+          //   .then(function(){ form.querySelector('.form-submit').textContent = 'Sent — Vic will be in touch'; form.querySelector('.form-submit').disabled = true; })
+          //   .catch(function(){ alert('Could not send. Email vic@sunlightcapitalinc.com or call (661) 206-1290.'); });
+          var btn = form.querySelector('.form-submit');
+          btn.textContent = 'Sent — Vic will be in touch';
+          btn.disabled = true;
+          setTimeout(function(){ alert('Form endpoint placeholder. Wire to Formspree before going live (5 lines, ~10 min).'); }, 200);
+          return false;
+        }
+      </script>
     </div>
   </div>
 </section>
@@ -497,7 +584,8 @@
         <h5>Companies</h5>
         <p>Sunlight Capital Inc.</p>
         <p>Agentcor Realty</p>
-        <p>3512 Coffee Road, Suite A<br>Bakersfield, CA 93308</p>
+        <p>5016 California Ave<br>Bakersfield, CA 93309</p>
+        <p><a href="tel:16612061290" style="color:rgba(247,242,232,0.8);font-weight:600">(661) 206-1290</a></p>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
