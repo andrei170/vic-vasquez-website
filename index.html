@@ -43,8 +43,11 @@
   /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(29,29,29,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(247,147,30,0.15);padding:14px 0}
   .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .brand{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.5px}
+  .brand{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.5px;display:flex;align-items:center;gap:10px}
   .brand .accent{color:var(--gold-bright)}
+  .brand-sun{flex-shrink:0;animation:sunSpin 60s linear infinite;transform-origin:center}
+  @keyframes sunSpin{to{transform:rotate(360deg)}}
+  @media(prefers-reduced-motion:reduce){.brand-sun{animation:none}}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{color:var(--cream);text-decoration:none;font-size:14px;font-weight:500;opacity:0.75;transition:opacity 0.25s}
   .nav-links a:hover{opacity:1}
@@ -175,6 +178,22 @@
   .proof-card .attr{font-size:13px;color:var(--text-light);font-weight:600;letter-spacing:0.06em}
   .proof-card .attr strong{color:var(--gold);font-weight:700}
 
+  /* PROOF BAND — verified credibility row above the testimonials */
+  .proof-band{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);padding:32px 0;margin:0 auto;max-width:1080px}
+  .proof-stat{text-align:center;padding:0 24px;border-right:1px solid var(--border-gold)}
+  .proof-stat:last-child{border-right:0}
+  .proof-stat-num{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold-deep);font-weight:600;line-height:1;margin-bottom:8px;letter-spacing:-0.01em}
+  .proof-stat-star{color:var(--gold);font-size:24px;margin-left:4px;vertical-align:middle}
+  .proof-stat-label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mid);font-weight:600;line-height:1.4}
+  @media(max-width:840px){.proof-band{grid-template-columns:repeat(2,1fr);gap:24px;padding:24px 0}.proof-stat{border-right:0;padding:0 12px}.proof-stat-num{font-size:32px}}
+
+  /* Two-up testimonials when only verified ones (vs three-up with placeholders) */
+  .proof-grid.two-up{grid-template-columns:repeat(2,1fr);max-width:880px}
+  @media(max-width:760px){.proof-grid.two-up{grid-template-columns:1fr}}
+  .proof-note{text-align:center;margin-top:28px;font-size:14px;color:var(--text-mid)}
+  .proof-note a{color:var(--gold-deep);text-decoration:none;font-weight:600;border-bottom:1px dotted var(--gold);padding-bottom:1px}
+  .proof-note a:hover{color:var(--gold)}
+
   /* CONTENT BAND */
   .content-band{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);color:var(--cream);padding:80px 0;text-align:center}
   .content-band h2{color:var(--cream);font-size:clamp(28px,3.6vw,40px)}
@@ -231,7 +250,22 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="#top" class="brand">Vic <span class="accent">Vazquez</span></a>
+    <a href="#top" class="brand">
+      <svg class="brand-sun" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+        <circle cx="16" cy="16" r="5.5" fill="#f7931e"/>
+        <g stroke="#f7931e" stroke-width="2" stroke-linecap="round">
+          <line x1="16" y1="3" x2="16" y2="6.5"/>
+          <line x1="16" y1="25.5" x2="16" y2="29"/>
+          <line x1="3" y1="16" x2="6.5" y2="16"/>
+          <line x1="25.5" y1="16" x2="29" y2="16"/>
+          <line x1="6.8" y1="6.8" x2="9.3" y2="9.3"/>
+          <line x1="22.7" y1="22.7" x2="25.2" y2="25.2"/>
+          <line x1="6.8" y1="25.2" x2="9.3" y2="22.7"/>
+          <line x1="22.7" y1="9.3" x2="25.2" y2="6.8"/>
+        </g>
+      </svg>
+      <span>Vic <span class="accent">Vazquez</span></span>
+    </a>
     <div class="nav-links">
       <a href="#investors">For Investors</a>
       <a href="#sellers">For Sellers</a>
@@ -424,26 +458,42 @@
   </div>
 </section>
 
-<!-- PROOF (text-only patterns until real testimonials are dropped in) -->
+<!-- PROOF — verified Zillow testimonials + Agentcor Inc. 5000 + 5.0 star rating -->
 <section class="alt-bg">
   <div class="container">
-    <div class="section-eyebrow">What Buyers and Sellers Are Saying</div>
-    <h2 class="section-title">A few patterns we hear <em>often.</em></h2>
-    <p class="section-sub">Pulled from buyer-list replies and seller close calls. Names removed for privacy until each operator opts in to be quoted.</p>
-    <div class="proof-grid">
-      <div class="proof-card">
-        <p class="quote">The deals come into the inbox before they show up anywhere else, and the numbers actually pencil. I have closed three this year off the buyer list.</p>
-        <p class="attr">Active investor, <strong>Kern County</strong></p>
+    <div class="proof-band">
+      <div class="proof-stat">
+        <div class="proof-stat-num">5.0<span class="proof-stat-star">★</span></div>
+        <div class="proof-stat-label">Zillow Rating · Vic Vazquez</div>
       </div>
-      <div class="proof-card">
-        <p class="quote">We needed to move the house in under thirty days because of an out-of-state move. Vic walked the property on a Saturday, had a number on Tuesday, closed eleven days after that.</p>
-        <p class="attr">Seller, <strong>Bakersfield</strong></p>
+      <div class="proof-stat">
+        <div class="proof-stat-num">29</div>
+        <div class="proof-stat-label">Verified Zillow Reviews · Agentcor</div>
       </div>
-      <div class="proof-card">
-        <p class="quote">The fact that he is a licensed broker and a wholesaler at the same time is what made me trust the assignment. Most operators are one or the other.</p>
-        <p class="attr">Buy-and-hold operator, <strong>Fresno County</strong></p>
+      <div class="proof-stat">
+        <div class="proof-stat-num">2022</div>
+        <div class="proof-stat-label">Inc. 5000 Honoree · Agentcor Realty</div>
+      </div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">22+</div>
+        <div class="proof-stat-label">Years in Bakersfield Real Estate</div>
       </div>
     </div>
+
+    <div class="section-eyebrow" style="margin-top:64px">What Clients Are Saying</div>
+    <h2 class="section-title">Verified <em>five-star</em> reviews.</h2>
+    <p class="section-sub">Pulled from Zillow, where Agentcor Realty holds a 5.0 / 29-review rating and Vic's individual rating is 5 stars across the board.</p>
+    <div class="proof-grid two-up">
+      <div class="proof-card">
+        <p class="quote">I highly recommend that you call Victor Vazquez. He works hard to ensure that you get top dollar for your home. Working with Victor was <strong>easy and stress-free</strong>.</p>
+        <p class="attr">Zillow client, <strong>Bakersfield</strong> · ★★★★★</p>
+      </div>
+      <div class="proof-card">
+        <p class="quote">Victor is an excellent realtor and General Manager. He is uplifting and motivational. I would recommend him as a realtor and as a supervisor.</p>
+        <p class="attr">Zillow client · ★★★★★</p>
+      </div>
+    </div>
+    <p class="proof-note"><a href="https://www.zillow.com/profile/agentcor%20realty" target="_blank" rel="noopener">Read all 29 reviews on Zillow →</a></p>
   </div>
 </section>
 
@@ -577,15 +627,32 @@
   <div class="container">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">Vic <span class="accent">Vazquez</span></div>
+        <div class="footer-brand">
+          <svg class="brand-sun" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:8px">
+            <circle cx="16" cy="16" r="5.5" fill="#f7931e"/>
+            <g stroke="#f7931e" stroke-width="2" stroke-linecap="round">
+              <line x1="16" y1="3" x2="16" y2="6.5"/>
+              <line x1="16" y1="25.5" x2="16" y2="29"/>
+              <line x1="3" y1="16" x2="6.5" y2="16"/>
+              <line x1="25.5" y1="16" x2="29" y2="16"/>
+              <line x1="6.8" y1="6.8" x2="9.3" y2="9.3"/>
+              <line x1="22.7" y1="22.7" x2="25.2" y2="25.2"/>
+              <line x1="6.8" y1="25.2" x2="9.3" y2="22.7"/>
+              <line x1="22.7" y1="9.3" x2="25.2" y2="6.8"/>
+            </g>
+          </svg>
+          Vic <span class="accent">Vazquez</span>
+        </div>
         <p class="footer-blurb">Off-market real estate deals across Bakersfield, Kern, Kings, Tulare, and Fresno counties. Investor pipeline + cash-buyer side, run by a licensed California broker.</p>
       </div>
       <div class="footer-col">
         <h5>Companies</h5>
-        <p>Sunlight Capital Inc.</p>
-        <p>Agentcor Realty</p>
-        <p>5016 California Ave<br>Bakersfield, CA 93309</p>
+        <p>Sunlight Capital Inc. — Cash buyers</p>
+        <p><a href="tel:16617021400" style="color:rgba(247,242,232,0.8);font-weight:600">(661) 702-1400</a></p>
+        <p><a href="mailto:PayMe@SunlightCapitalInc.com" style="color:rgba(247,242,232,0.8);font-weight:500;font-size:13px">PayMe@SunlightCapitalInc.com</a></p>
+        <p style="margin-top:14px">Agentcor Realty — Listings &amp; Brokerage</p>
         <p><a href="tel:16612061290" style="color:rgba(247,242,232,0.8);font-weight:600">(661) 206-1290</a></p>
+        <p style="font-size:12px;margin-top:14px">5016 California Ave<br>Bakersfield, CA 93309</p>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
